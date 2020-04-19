@@ -13,8 +13,16 @@
         Django </a>{{ x }}.
     </p>
 
-    <p>
-        {{ message }}
-    </p>
+    <h2>Meetings</h2>
+    <ul>
+        {% for meeting in meetings %}
+            <li>
+                <a href="{% url 'detail' meeting.id %}">
+                    {{ meeting.title }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'rooms' %}">Rooms list</a>
 </body>
 </html>
