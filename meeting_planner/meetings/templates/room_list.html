@@ -1,9 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Rooms</title>
-</head>
+{% extends "base.html" %}
+
+{% block title %}Rooms{% endblock %}
+
+{% block content %}
 <body>
     <h2>Rooms</h2>
     <ul>
@@ -11,5 +10,5 @@
         <li>{{ room }}</li>
         {% endfor %}
     </ul>
-</body>
-</html>
+    <a href="{% url 'welcome' %}">Home</a>
+{% endblock %}

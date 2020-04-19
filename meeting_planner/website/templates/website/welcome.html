@@ -1,10 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Welcome To Meeting Planner</title>
-</head>
-<body>
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Welcome{% endblock %}
+
+{% block content %}
     <h1>Welcome to the Meeting Planner!</h1>
     <p>
         This is the demo application for the course
@@ -12,6 +11,8 @@
         on <a href="https://www.django-rest-framework.org/">
         Django </a>{{ x }}.
     </p>
+
+    <img src="{% static 'website/calendar.png' %}" width="80px">
 
     <h2>Meetings</h2>
     <ul>
@@ -24,5 +25,4 @@
         {% endfor %}
     </ul>
     <a href="{% url 'rooms' %}">Rooms list</a>
-</body>
-</html>
+{% endblock %}
